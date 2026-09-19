@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="雅培菁智官方支持中心，提供雅培菁智奶粉的冲调指南、营养解析、喂养建议及常见问题解答，致力于为家长提供科学、专业的婴幼儿营养护理方案。">
+    <meta name="keywords" content="雅培菁智, 雅培奶粉, 婴幼儿营养, 喂养指南, 菁智冲调方法">
+    <title>雅培菁智-科学喂养与营养解析指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #e6f0fa;
+            --accent-color: #ff9800;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --bg-light: #f9f9f9;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --container-width: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            font-size: 14px;
+            color: var(--text-gray);
+            font-weight: normal;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 16px;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-weight: 500;
+        }
+
+        .cta-button:hover {
+            background-color: #004494;
+            color: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .tag {
+            background-color: var(--white);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: var(--primary-color);
+            border: 1px solid var(--secondary-color);
+        }
+
+        /* Key Features */
+        .features {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-gray);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            font-size: 24px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .feature-card p {
+            color: var(--text-gray);
+            font-size: 15px;
+        }
+
+        /* Nutrition Focus */
+        .nutrition {
+            background-color: var(--white);
+            padding: 80px 0;
+        }
+
+        .nutrition-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .nutrition-text {
+            flex: 1;
+        }
+
+        .nutrition-text h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .nutrition-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .check-icon {
+            color: #28a745;
+            font-weight: bold;
+            margin-top: 3px;
+        }
+
+        .nutrition-image {
+            flex: 1;
+        }
+
+        .nutrition-image img {
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 80px 0;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            background-color: var(--white);
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover {
+            background-color: #fcfcfc;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            color: var(--text-gray);
+            background-color: #fafafa;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 20px 20px 20px;
+            max-height: 200px;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        .icon-plus {
+            font-size: 20px;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .icon-plus {
+            transform: rotate(45deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+            font-size: 14px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+            color: #95a5a6;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .nutrition-content {
+                flex-direction: column;
+            }
+
+            .nutrition-image {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                雅培菁智 <span>支持中心</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#nutrition" class="active">营养解析</a></li>
+                    <li><a href="#care">喂养指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="cta-button">咨询专家</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>雅培菁智：为宝宝成长注入智慧</h1>
+                <p>科学配方，精准营养。我们致力于为您的宝宝提供接近母乳的优质营养支持，助力宝宝健康发育，开启聪明未来。</p>
+                <div class="hero-tags">
+                    <span class="tag">GOS & FOS益生元</span>
+                    <span class="tag">DHA & ARA</span>
+                    <span class="tag">核苷酸</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features -->
+        <section class="features" id="nutrition">
+            <div class="container">
+                <div class="section-title">
+                    <h2>菁智核心营养体系</h2>
+                    <p>专为宝宝大脑与体质发育设计，关键营养素科学配比</p>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">🧠</div>
+                        <h3>脑部发育支持</h3>
+                        <p>添加DHA和ARA，这两种脂肪酸是大脑和视网膜发育的重要成分，帮助宝宝脑部神经突触的形成，促进认知能力发展。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>天然免疫屏障</h3>
+                        <p>含有核苷酸，这是细胞增殖和免疫功能的重要物质，有助于增强宝宝自身的抵抗力，适应外界环境变化。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🥛</div>
+                        <h3>易于消化吸收</h3>
+                        <p>采用亲和人体配方，富含GOS和FOS益生元组合，有助于软化便便，维持肠道菌群平衡，让宝宝肠胃更舒适。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Nutrition Info -->
+        <section class="nutrition">
+            <div class="container">
+                <div class="nutrition-content">
+                    <div class="nutrition-text">
+                        <h2>精准营养，助力成长</h2>
+                        <p style="margin-bottom: 20px;">雅培菁智配方奶粉不仅仅提供基础营养，更关注宝宝成长的每一个关键阶段。我们的配方模拟母乳成分，确保每一口营养都易于被宝宝吸收利用。</p>
+                        <ul class="nutrition-list">
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <div>
+                                    <strong>5种核苷酸</strong>
+                                    <p style="font-size: 14px; color: #666;">全面支持免疫系统和消化系统发育。</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <div>
+                                    <strong>益生菌组合</strong>
+                                    <p style="font-size: 14px; color: #666;">促进肠道蠕动，维护肠道健康环境。</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <div>
+                                    <strong>铁锌钙强化</strong>
+                                    <p style="font-size: 14px; color: #666;">满足宝宝快速生长对矿物质的需求。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nutrition-image">
+                        <!-- Using a generic placeholder representing nutrition context -->
+                        <img src="https://picsum.photos/seed/nutrition/600/400" alt="婴幼儿营养示意图">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Care Guide -->
+        <section class="features" id="care" style="background-color: var(--white);">
+            <div class="container">
+                <div class="section-title">
+                    <h2>科学喂养指南</h2>
+                    <p>正确的冲调与喂养方法，让营养吸收更高效</p>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <h3>✅ 准确冲调步骤</h3>
+                        <ol style="margin-left: 20px; color: var(--text-gray); font-size: 14px;">
+                            <li style="margin-bottom: 8px;">清洗双手，煮沸奶瓶及配件。</li>
+                            <li style="margin-bottom: 8px;">按说明书比例加入适量温开水（40℃-50℃）。</li>
+                            <li style="margin-bottom: 8px;">加入适量雅培菁智奶粉，轻轻摇匀。</li>
+                            <li style="margin-bottom: 8px;">滴在手腕内侧测试温度，适宜后喂养。</li>
+                        </ol>
+                    </article>
+                    <article class="feature-card">
+                        <h3>⚠️ 喂养注意事项</h3>
+                        <ul style="margin-left: 20px; color: var(--text-gray); font-size: 14px;">
+                            <li style="margin-bottom: 8px;">冲调好的奶粉应在1小时内喂完。</li>
+                            <li style="margin-bottom: 8px;">切勿将剩奶留至下一餐。</li>
+                            <li style="margin-bottom: 8px;">不要添加其他辅食或药物。</li>
+                            <li style="margin-bottom: 8px;">注意观察宝宝排便情况，及时调整。</li>
+                        </ul>
+                    </article>
+                    <article class="feature-card">
+                        <h3>💡 保存与储存</h3>
+                        <p style="color: var(--text-gray); font-size: 14px;">奶粉开封后请密封保存，放置在阴凉干燥处，避免阳光直射。建议在开封后1个月内用完，以保证营养活性。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <div class="section-title">
+                    <h2>家长常见问题解答</h2>
+                    <p>关于雅培菁智的疑问，这里都有答案</p>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            雅培菁智适合多大的宝宝食用？
+                            <span class="icon-plus">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>雅培菁智系列通常适合6个月至3岁的婴幼儿。不同阶段的产品配方略有调整，建议根据宝宝的月龄选择对应阶段的产品，并咨询专业医生意见。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            冲调水温多少度最合适？
+                            <span class="icon-plus">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>建议使用40℃-50℃的温开水进行冲调。过高的水温会破坏奶粉中的热敏性营养成分（如维生素和益生菌），过低的温度则可能导致奶粉溶解不均。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            宝宝喝了之后便秘或腹泻怎么办？
+                            <span class="icon-plus">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>如果宝宝出现排便习惯改变，建议先暂停转奶或更换奶粉，观察几天。如果情况持续，请及时咨询儿科医生，排除其他健康问题。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            开封后的奶粉还能保存多久？
+                            <span class="icon-plus">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>奶粉罐上通常有开封日期。一般来说，开封后建议在一个月内用完。每次取用后请务必拧紧盖子，防止受潮变质。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于菁智</h4>
+                    <ul>
+                        <li><a href="#">品牌故事</a></li>
+                        <li><a href="#">研发实力</a></li>
+                        <li><a href="#">母乳研究</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>喂养支持</h4>
+                    <ul>
+                        <li><a href="#">冲调指南</a></li>
+                        <li><a href="#">转奶技巧</a></li>
+                        <li><a href="#">营养咨询</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><a href="#">在线客服</a></li>
+                        <li><a href="#">服务热线</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 雅培菁智支持中心. 本页面仅为信息展示，非官方网站。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
