@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="高伯 - 专注高端家居定制与全屋整装解决方案，提供实木家具、定制衣柜、橱柜及软装设计服务。查看最新设计案例、材质工艺及施工流程。">
+    <meta name="keywords" content="高伯,家居定制,全屋整装,实木家具,定制衣柜,高端家居">
+    <title>高伯 - 高端家居定制与全屋整装解决方案</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B5A2B;
+            --primary-light: #D4A373;
+            --secondary-color: #2C3E50;
+            --bg-color: #F9F7F2;
+            --card-bg: #FFFFFF;
+            --text-main: #333333;
+            --text-sub: #666666;
+            --spacing-unit: 1rem;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 导航栏 */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 1rem;
+            color: var(--secondary-color);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .cta-button:hover {
+            background-color: #6d4621;
+            transform: translateY(-1px);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            position: relative;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://picsum.photos/seed/interior99/1920/1080.jpg') no-repeat center center/cover;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+            animation: fadeIn Up 1s ease;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .hero-btn:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        /* 核心优势 */
+        .features {
+            padding: 80px 0;
+            background-color: var(--bg-color);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: var(--text-sub);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 40px 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        .feature-card p {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+        }
+
+        /* 服务范围 */
+        .services {
+            padding: 80px 0;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-bottom: 80px;
+        }
+
+        .service-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .service-image {
+            flex: 1;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .service-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .service-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .service-content {
+            flex: 1;
+        }
+
+        .service-content h3 {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .service-list li {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+            color: var(--text-sub);
+        }
+
+        .service-list li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+
+        /* 选购指南/FAQ */
+        .guide {
+            padding: 80px 0;
+            background-color: #F2EFE9;
+        }
+
+        .guide-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .guide-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .guide-text p {
+            margin-bottom: 20px;
+            color: var(--text-sub);
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 8px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .faq-answer {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-item.active .faq-question::before {
+            content: '+';
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: var(--secondary-color);
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-light);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .service-item, .service-item:nth-child(even) {
+                flex-direction: column;
+            }
+
+            .guide-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                高伯
+            </a>
+            <nav class="nav-links">
+                <a href="#hero">首页</a>
+                <a href="#features">品牌优势</a>
+                <a href="#services">服务体系</a>
+                <a href="#guide">选购指南</a>
+                <a href="#contact">联系我们</a>
+            </nav>
+            <a href="#contact" class="cta-button">免费设计咨询</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1>重塑生活美学，定制专属空间</h1>
+                <p>高伯家居致力于为现代家庭提供高品质、个性化的全屋整装解决方案。从设计到交付，我们关注每一个细节。</p>
+                <a href="#services" class="hero-btn">探索我们的服务</a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>为什么选择高伯</h2>
+                    <p>我们坚持环保理念与精湛工艺的结合，为您打造健康、舒适、耐用的理想居所。</p>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">🌿</div>
+                        <h3>环保材质</h3>
+                        <p>严选E0级环保板材，杜绝甲醛超标，为家人提供安全健康的居住环境。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">📐</div>
+                        <h3>个性化设计</h3>
+                        <p>资深设计师一对一服务，结合您的户型与生活习惯，量身定制空间方案。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🛠️</div>
+                        <h3>精湛工艺</h3>
+                        <p>德国进口设备加工，专业安装团队，确保每一个柜体结构稳固耐用。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-title">
+                    <h2>核心服务体系</h2>
+                    <p>从厨房到卧室，从收纳到软装，提供一站式家居解决方案。</p>
+                </div>
+
+                <article class="service-item">
+                    <div class="service-image">
+                        <img src="https://picsum.photos/seed/kitchen1/600/400" alt="定制橱柜">
+                    </div>
+                    <div class="service-content">
+                        <h3>全屋定制橱柜</h3>
+                        <p>根据厨房动线设计，集成烹饪、清洗、储物功能。提供多种材质与门板选择，让厨房既美观又高效。</p>
+                        <ul class="service-list">
+                            <li>无缝一体台面设计</li>
+                            <li>智能收纳系统</li>
+                            <li>耐用五金配件</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="service-item">
+                    <div class="service-image">
+                        <img src="https://picsum.photos/seed/wardrobe2/600/400" alt="定制衣柜">
+                    </div>
+                    <div class="service-content">
+                        <h3>定制衣柜系统</h3>
+                        <p>打破传统柜体格局，利用每一寸空间。内部结构灵活多变，满足四季衣物、被褥及配饰的分区存储需求。</p>
+                        <ul class="service-list">
+                            <li>分区收纳，井井有条</li>
+                            <li>衣帽间/步入式衣橱</li>
+                            <li>隐形拉手设计</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="service-item">
+                    <div class="service-image">
+                        <img src="https://picsum.photos/seed/livingroom3/600/400" alt="全屋整装">
+                    </div>
+                    <div class="service-content">
+                        <h3>全屋整装配套</h3>
+                        <p>涵盖玄关鞋柜、电视柜、书柜及书房家具。风格统一，色彩搭配和谐，提升整体家居格调。</p>
+                        <ul class="service-list">
+                            <li>风格统一搭配</li>
+                            <li>功能分区明确</li>
+                            <li>高端环保饰面</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Guide & FAQ Section -->
+        <section id="guide" class="guide">
+            <div class="container guide-container">
+                <div class="guide-text">
+                    <h3>选购高伯家居指南</h3>
+                    <p>在开始定制之前，了解这些关键点能帮助您做出更明智的选择。</p>
+                    <p>首先，明确您的预算范围和主要需求。其次，关注板材的环保等级和五金件的品牌。最后，实地考察工厂工艺和过往案例。</p>
+                    <p>高伯提供透明的报价体系和完善的售后服务，让您省心放心。</p>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">定制家具需要多长时间？</div>
+                        <div class="faq-answer">通常从量房到设计出图需要3-5天，工厂生产周期约为30-45天，安装及验收通常需要1-2天，具体视订单量而定。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">高伯的板材环保吗？</div>
+                        <div class="faq-answer">是的，我们承诺所有板材均达到E0级环保标准，并附有第三方检测报告，确保零甲醛释放。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">是否支持异地安装？</div>
+                        <div class="faq-answer">支持全国大部分城市的上门测量与安装服务，偏远地区请联系客服确认具体流程。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">质保期是多久？</div>
+                        <div class="faq-answer">柜体结构质保5年，五金配件质保3年，终身提供维修保养服务。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="contact" style="padding: 80px 0; text-align: center; background-color: white;">
+            <div class="container">
+                <h2 style="margin-bottom: 20px; color: var(--secondary-color);">准备好开始您的定制之旅了吗？</h2>
+                <p style="margin-bottom: 30px; color: var(--text-sub);">点击下方按钮，预约免费上门量尺与设计方案。</p>
+                <a href="#" class="cta-button" style="padding: 15px 50px; font-size: 1.2rem;">立即预约咨询</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于高伯</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">高伯家居成立于2010年，专注于高端全屋定制领域。我们致力于通过创新设计和精湛工艺，提升中国人的居住品质。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#hero">首页</a></li>
+                        <li><a href="#services">服务项目</a></li>
+                        <li><a href="#guide">常见问题</a></li>
+                        <li><a href="#contact">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>服务项目</h4>
+                    <ul>
+                        <li><a href="#">全屋定制</a></li>
+                        <li><a href="#">橱柜定制</a></li>
+                        <li><a href="#">衣帽间设计</a></li>
+                        <li><a href="#">软装配饰</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>电话：400-888-6666</li>
+                        <li>邮箱：service@gaobo.com</li>
+                        <li>地址：上海市浦东新区家居大道888号</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 高伯家居 版权所有. 本网站仅用于展示，不提供实际交易。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的 FAQ 手风琴交互
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
