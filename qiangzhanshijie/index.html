@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>枪战世界下载-专业FPS射击游戏资源与安全安装指南</title>
+    <meta name="description" content="提供枪战世界下载官方资源，包含最新版本补丁、安全安装教程、游戏配置要求及玩家社区讨论。致力于提供安全、稳定的游戏安装环境。">
+    <meta name="keywords" content="枪战世界下载,枪战世界,FPS射击游戏,游戏安装教程,游戏补丁">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-dark: #1a1a1a;
+            --bg-card: #2d2d2d;
+            --text-light: #ecf0f1;
+            --text-gray: #95a5a6;
+            --border-radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(26, 26, 26, 0.95);
+            border-bottom: 1px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .header-actions .btn {
+            padding: 0.5rem 1.2rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            margin-left: 10px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://picsum.photos/seed/gunfight/1920/600') no-repeat center center/cover;
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .download-box {
+            background-color: var(--bg-card);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 1px solid #444;
+        }
+
+        .download-info {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .file-size {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        .file-size strong {
+            color: var(--text-light);
+        }
+
+        .btn-large {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-large:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.6);
+        }
+
+        /* Features */
+        .features {
+            padding: 4rem 0;
+            background-color: var(--bg-dark);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background-color: var(--bg-card);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            transition: transform 0.3s;
+            border: 1px solid #333;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        .feature-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Installation Guide */
+        .guide {
+            padding: 4rem 0;
+            background-color: #222;
+        }
+
+        .steps-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .step {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            background-color: var(--accent-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .step-content p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        .warning-box {
+            background-color: rgba(231, 76, 60, 0.1);
+            border-left: 4px solid var(--accent-color);
+            padding: 1rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #e74c3c;
+        }
+
+        /* System Requirements */
+        .requirements {
+            padding: 4rem 0;
+            background-color: var(--bg-dark);
+        }
+
+        .req-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .req-card {
+            background-color: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+        }
+
+        .req-card h3 {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #444;
+            padding-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .req-list li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        .req-list li span:last-child {
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 4rem 0;
+            background-color: #222;
+        }
+
+        .faq-item {
+            background-color: var(--bg-card);
+            margin-bottom: 1rem;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            color: var(--text-gray);
+            display: none;
+            border-top: 1px solid #333;
+            padding-top: 1rem;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            padding: 3rem 0;
+            border-top: 1px solid #333;
+            margin-top: 2rem;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .footer-col {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #222;
+            color: #555;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            nav {
+                display: none; /* Simplify for mobile */
+            }
+
+            .header-actions .btn {
+                display: none;
+            }
+
+            .header-actions .mobile-menu-btn {
+                display: block;
+            }
+            
+            .download-info {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span>◆</span> 枪战世界
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#download">下载中心</a></li>
+                    <li><a href="#guide">安装教程</a></li>
+                    <li><a href="#requirements">配置要求</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#download" class="btn btn-primary">立即下载</a>
+                <a href="#" class="btn btn-outline">社区论坛</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>体验极致FPS射击快感</h1>
+                <p>专业的战术射击游戏体验，包含高清画质、流畅帧率与丰富的武器改装系统。获取最新版本，开启您的战场之旅。</p>
+                
+                <div class="download-box" id="download">
+                    <div class="download-info">
+                        <div>
+                            <h3 style="margin-bottom:0.2rem;">枪战世界 v2.5.0 正式版</h3>
+                            <span class="file-size">大小: <strong>12.4 GB</strong> | MD5: 校验中...</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-large" onclick="alert('模拟下载开始：正在连接服务器...'); return false;">立即下载客户端</a>
+                    <div style="margin-top: 1rem; font-size: 0.8rem; color: #888;">
+                        下载需使用官方加速器，支持Windows 10/11系统
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">为什么选择本站下载</h2>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>安全无毒</h3>
+                        <p>所有文件经过360安全软件及火绒安全检测，确保无捆绑软件、无木马病毒，纯净安装。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>高速直链</h3>
+                        <p>提供电信、联通、移动多线路高速下载源，断点续传，下载速度稳定在50MB/s以上。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🔧</div>
+                        <h3>一键修复</h3>
+                        <p>配套提供游戏启动器，自动检测缺失组件，一键修复DirectX、VC++运行库及游戏报错。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Installation Guide -->
+        <section class="guide" id="guide">
+            <div class="container">
+                <h2 class="section-title">安装指南</h2>
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>下载安装包</h3>
+                            <p>点击上方“立即下载”按钮，选择适合您网络环境的下载节点。下载完成后请检查文件大小是否为12.4GB。</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>解压与安装</h3>
+                            <p>右键点击压缩包，选择“解压到当前文件夹”。找到解压后的安装程序，双击运行。按照向导提示，建议将游戏安装在非系统盘（如D盘）以避免占用C盘空间。</p>
+                            <div class="warning-box">
+                                注意：安装过程中请勿关闭杀毒软件，以免误删游戏文件。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>启动游戏</h3>
+                            <p>安装完成后，桌面会出现游戏快捷方式。双击启动，首次登录建议先在“设置”中调整画面选项至推荐状态。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- System Requirements -->
+        <section class="requirements" id="requirements">
+            <div class="container">
+                <h2 class="section-title">配置要求</h2>
+                <div class="req-grid">
+                    <div class="req-card">
+                        <h3>最低配置</h3>
+                        <ul class="req-list">
+                            <li><span>操作系统</span> <span>Windows 7/10 64位</span></li>
+                            <li><span>处理器</span> <span>Intel Core i3 530 / AMD Phenom II X4</span></li>
+                            <li><span>内存</span> <span>4 GB RAM</span></li>
+                            <li><span>显卡</span> <span>NVIDIA GeForce GTS 450 / AMD Radeon HD 5770</span></li>
+                            <li><span>存储空间</span> <span>需要 15 GB 可用空间</span></li>
+                        </ul>
+                    </div>
+                    <div class="req-card">
+                        <h3>推荐配置</h3>
+                        <ul class="req-list">
+                            <li><span>操作系统</span> <span>Windows 10 64位</span></li>
+                            <li><span>处理器</span> <span>Intel Core i5 6500 / AMD Ryzen 3 3200G</span></li>
+                            <li><span>内存</span> <span>8 GB RAM</span></li>
+                            <li><span>显卡</span> <span>NVIDIA GeForce GTX 960 / AMD Radeon R7 370</span></li>
+                            <li><span>存储空间</span> <span>需要 15 GB 可用空间</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq" id="faq">
+            <div class="container">
+                <h2 class="section-title">常见问题</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">下载速度很慢怎么办？</div>
+                    <div class="faq-answer">
+                        请尝试更换下载节点（如从电信节点切换至联通节点），或关闭后台下载软件。如果是网络高峰期，建议错峰下载。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">游戏启动后黑屏或闪退？</div>
+                    <div class="faq-answer">
+                        请检查是否安装了DirectX和Visual C++运行库。您可以下载本站提供的“游戏修复工具”进行一键修复，或者尝试以管理员身份运行游戏。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">下载的文件是压缩包，怎么安装？</div>
+                    <div class="faq-answer">
+                        这是正常的安装包形式。您需要使用WinRAR或7-Zip等解压软件解压，解压后找到安装程序进行安装。安装完成后，安装包可以删除。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">游戏账号如何找回？</div>
+                    <div class="faq-answer">
+                        请登录游戏官网的“账号中心”，通过绑定的手机号或邮箱进行验证找回。如果绑定信息已丢失，请联系客服提供注册时的设备信息协助审核。
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于枪战世界</h4>
+                    <p style="color: #888; font-size: 0.9rem; line-height: 1.6;">
+                        本站为玩家提供专业的游戏资源下载服务。我们致力于维护游戏社区的纯净环境，提供最安全、高效的下载体验。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">游戏官网</a></li>
+                        <li><a href="#">最新补丁</a></li>
+                        <li><a href="#">游戏攻略</a></li>
+                        <li><a href="#">社区论坛</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助支持</h4>
+                    <ul>
+                        <li><a href="#">下载帮助</a></li>
+                        <li><a href="#">安装教程</a></li>
+                        <li><a href="#">账号问题</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 枪战世界资源站 版权所有. 本站仅为玩家提供资源分享服务，游戏版权归游戏厂商所有。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    
+    <script>
+        // FAQ Toggle Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                item.querySelector('.faq-question').addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
