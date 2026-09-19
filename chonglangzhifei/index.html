@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冲浪纸飞机折法 - 详细图解教程与飞行技巧</title>
+    <meta name="description" content="本站提供冲浪纸飞机折法的详细图文教程，包含步骤分解、飞行原理分析及调整技巧。无论你是新手还是进阶玩家，都能在这里找到最清晰的折纸指南，提升你的飞行体验。">
+    <meta name="keywords" content="冲浪纸飞机折法, 纸飞机折法大全, 怎么折纸飞机, 飞行技巧">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #3b82f6;
+            --secondary-color: #1e40af;
+            --accent-color: #f59e0b;
+            --text-main: #1f2937;
+            --text-light: #6b7280;
+            --bg-body: #f3f4f6;
+            --bg-card: #ffffff;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1.25rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #e0f2fe 0%, #ffffff 100%);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        /* Main Content */
+        main {
+            padding: 3rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        /* Steps Grid */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .step-card {
+            background: var(--bg-card);
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            background-color: var(--primary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .step-content {
+            padding: 1.5rem;
+        }
+
+        .step-content h3 {
+            margin-bottom: 0.75rem;
+            font-size: 1.25rem;
+        }
+
+        .step-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Features Section */
+        .features {
+            background-color: var(--bg-card);
+            padding: 3rem 0;
+            margin-bottom: 3rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 2rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.75rem;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .feature-item h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-item p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            margin-bottom: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.25rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            background-color: var(--bg-card);
+        }
+
+        .faq-answer {
+            padding: 0 1.25rem 1.25rem;
+            color: var(--text-light);
+            display: none;
+            border-top: 1px solid #f3f4f6;
+            padding-top: 1rem;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        .arrow {
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .arrow {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1f2937;
+            color: #d1d5db;
+            padding: 3rem 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #374151;
+            font-size: 0.875rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+            }
+            
+            nav ul {
+                margin: 1rem 0;
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <span>✈️</span> 纸飞机工坊
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#steps">折法教程</a></li>
+                    <li><a href="#features">飞行原理</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#steps" class="cta-btn">开始折叠</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>冲浪纸飞机折法</h1>
+            <p>掌握冲浪纸飞机的折叠技巧，体验滑翔机般的平稳飞行。本站提供从零开始的详细图解，助你折出完美的飞行器。</p>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <!-- 核心教程区 -->
+        <section id="steps">
+            <div class="section-title">
+                <h2>详细折叠步骤</h2>
+                <p>请按照以下四个步骤完成折叠，确保纸张平整，是获得良好飞行性能的关键。</p>
+            </div>
+
+            <div class="steps-grid">
+                <!-- 步骤 1 -->
+                <article class="step-card">
+                    <div class="step-content">
+                        <div class="step-number">1</div>
+                        <h3>对折与压痕</h3>
+                        <p>取一张长方形的纸（建议使用A4纸或稍薄的彩纸）。将纸沿长边对折，形成一个中心折痕。用指甲或直尺用力压平，确保折痕清晰锐利。</p>
+                    </div>
+                </article>
+
+                <!-- 步骤 2 -->
+                <article class="step-card">
+                    <div class="step-content">
+                        <div class="step-number">2</div>
+                        <h3>制作折翼</h3>
+                        <p>将纸张翻面。从顶端开始，将两个角向中心线折叠，使尖端与中心线对齐。注意左右两侧的折痕必须对称，否则飞机飞行时会偏航。</p>
+                    </div>
+                </article>
+
+                <!-- 步骤 3 -->
+                <article class="step-card">
+                    <div class="step-content">
+                        <div class="step-number">3</div>
+                        <h3>折叠机头</h3>
+                        <p>将带有折痕的顶端再次向下折叠，大约折叠纸张长度的1/3处。这一步决定了飞机的配重和重心位置。</p>
+                    </div>
+                </article>
+
+                <!-- 步骤 4 -->
+                <article class="step-card">
+                    <div class="step-content">
+                        <div class="step-number">4</div>
+                        <h3>调整机翼角度</h3>
+                        <p>将两侧的机翼向上轻轻翘起。冲浪纸飞机的关键在于机翼的后缘需要略微向上翘起，形成一定的仰角，以产生升力。</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 原理与技巧区 -->
+        <section id="features" class="features">
+            <div class="section-title">
+                <h2>飞行原理与调校技巧</h2>
+                <p>折好后如何让它飞得更远？了解冲浪纸飞机的空气动力学原理。</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <span class="feature-icon">📐</span>
+                    <h3>重心调整</h3>
+                    <p>确保机头部分有一定的重量。如果飞机总是头重尾轻，尝试将机头向内折叠一点；如果头轻，则增加机头折叠的深度。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🌬️</span>
+                    <h3>滑翔性能</h3>
+                    <p>冲浪纸飞机依靠滑翔飞行，而非弹射。投掷时手臂应自然摆动，保持飞机与地面约15-30度的夹角，轻轻向前推出。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">✨</span>
+                    <h3>折叠质量</h3>
+                    <p>纸张的平整度直接影响飞行轨迹。每一处折痕都要用力压实，避免出现波浪状，这会增加空气阻力。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="faq-section">
+            <div class="section-title">
+                <h2>常见问题解答</h2>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    冲浪纸飞机和普通折法有什么区别？
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    冲浪纸飞机（也称滑翔机纸飞机）的设计重点在于机翼的拱度和机头的重量分布。相比普通折法，它通常有更长的机翼和更深的机头，能够利用空气动力学产生更大的升力，飞行距离更远且滞空时间更长。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    折纸时纸张需要多硬？
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    建议使用稍微硬挺的纸张，如A4打印纸或稍厚的卡纸。过软的纸张在飞行过程中容易变形，导致飞行不稳定。如果是彩纸，请选择厚一点的材质。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    飞机总是往一边偏怎么办？
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    飞机偏航通常是由于机翼折叠不对称或投掷角度倾斜造成的。请仔细检查两个机翼的角度是否一致，确保折叠时左右对称。同时，投掷时保持手臂水平，不要用力过猛导致飞机旋转。
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>纸飞机工坊</h4>
+                    <p>专注于分享各种经典纸飞机折法与飞行技巧，还原童年的乐趣。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">经典折法</a></li>
+                        <li><a href="#">竞速技巧</a></li>
+                        <li><a href="#">材料选购</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><a href="#">投稿合作</a></li>
+                        <li><a href="#">反馈建议</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 纸飞机工坊. 保留所有权利. 本站内容仅供学习与交流使用。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ 交互逻辑
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                const isActive = parent.classList.contains('active');
+                
+                // 关闭所有其他打开的项
+                document.querySelectorAll('.faq-item').forEach(faq => {
+                    faq.classList.remove('active');
+                });
+
+                // 如果点击的不是已经打开的项，则打开它
+                if (!isActive) {
+                    parent.classList.add('active');
+                }
+            });
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
