@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="昆明火车站监控中心官方信息发布平台，提供车站监控实时概况、安防系统介绍、公共安全须知及旅客出行安全指南。">
+    <meta name="keywords" content="昆明火车站监控,昆明站监控,昆明火车站安防,昆明铁路安全,火车站监控查询">
+    <title>昆明火车站监控-官方安防信息发布与旅客安全指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #f8f9fa;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --border-color: #e0e0e0;
+            --alert-red: #d32f2f;
+            --success-green: #2e7d32;
+            --container-width: 1200px;
+            --header-height: 70px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: #f4f6f9;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 60px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .section-header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-desc {
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            height: var(--header-height);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background-color: var(--primary-color);
+            color: #fff;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-dark);
+            padding: 10px 0;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 86, 179, 0.8), rgba(0, 40, 85, 0.9)), url('https://picsum.photos/seed/kunmingtrain/1920/600.jpg') center/cover no-repeat;
+            color: #fff;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: #fff;
+            border-radius: 4px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #004494;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid #fff;
+            margin-left: 15px;
+        }
+
+        .btn-outline:hover {
+            background-color: #fff;
+            color: var(--primary-color);
+        }
+
+        /* Monitoring Grid */
+        .monitor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .monitor-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .monitor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .monitor-img {
+            width: 100%;
+            height: 180px;
+            background-color: #000;
+            position: relative;
+        }
+
+        .monitor-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+
+        .live-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--alert-red);
+            color: #fff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.6; }
+            100% { opacity: 1; }
+        }
+
+        .monitor-info {
+            padding: 20px;
+        }
+
+        .monitor-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            background-color: var(--success-green);
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .monitor-info p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .monitor-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #999;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        /* Security Guide List */
+        .guide-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .guide-item {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 5px solid var(--primary-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .guide-icon {
+            font-size: 2rem;
+            margin-right: 20px;
+            color: var(--primary-color);
+            flex-shrink: 0;
+        }
+
+        .guide-content h3 {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .guide-content p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* FAQ Section */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+        }
+
+        .faq-item {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        .faq-question {
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+        }
+
+        .faq-question::before {
+            content: 'Q';
+            background: var(--primary-color);
+            color: #fff;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+
+        .faq-answer {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            padding-left: 34px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            padding: 50px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; } /* Simplified for demo */
+            .guide-item { flex-direction: column; }
+            .guide-icon { margin-bottom: 10px; }
+            .faq-grid { grid-template-columns: 1fr; }
+            .monitor-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <div class="logo-icon">K</div>
+                昆明站安防中心
+            </div>
+            <nav class="nav-links">
+                <a href="#" class="active">监控概览</a>
+                <a href="#guide">安全须知</a>
+                <a href="#faq">常见问题</a>
+                <a href="#contact">联系我们</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>昆明火车站监控中心</h1>
+            <p>构建全方位、立体化的智能安防体系，守护每一位旅客的出行安全。实时监控覆盖进站口、候车区及出站通道，确保车站秩序井然。</p>
+            <div>
+                <a href="#monitoring" class="btn">查看实时监控</a>
+                <a href="#guide" class="btn btn-outline">了解安防指南</a>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <!-- 监控点位展示 -->
+        <section id="monitoring" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">重点区域监控分布</h2>
+                    <p class="section-desc">系统采用高清数字监控技术，对车站核心区域进行全天候无死角监控，支持异常行为自动识别与报警。</p>
+                </div>
+
+                <div class="monitor-grid">
+                    <!-- 卡片 1 -->
+                    <article class="monitor-card">
+                        <div class="monitor-img">
+                            <span class="live-tag">● LIVE</span>
+                            <img src="https://picsum.photos/seed/kunming1/400/250" alt="昆明火车站进站口监控">
+                        </div>
+                        <div class="monitor-info">
+                            <h3>进站大厅监控 <span class="status-dot" title="运行中"></span></h3>
+                            <p>覆盖南北进站口及安检通道，重点监控旅客安检过程及排队秩序，确保通行效率与安全。</p>
+                            <div class="monitor-meta">
+                                <span>分辨率: 4K</span>
+                                <span>状态: 正常</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 卡片 2 -->
+                    <article class="monitor-card">
+                        <div class="monitor-img">
+                            <span class="live-tag">● LIVE</span>
+                            <img src="https://picsum.photos/seed/kunming2/400/250" alt="昆明火车站候车室监控">
+                        </div>
+                        <div class="monitor-info">
+                            <h3>候车大厅监控 <span class="status-dot" title="运行中"></span></h3>
+                            <p>全方位覆盖候车区域，实时监控旅客候车状态及人员流动，保障旅客人身财产安全。</p>
+                            <div class="monitor-meta">
+                                <span>分辨率: 4K</span>
+                                <span>状态: 正常</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 卡片 3 -->
+                    <article class="monitor-card">
+                        <div class="monitor-img">
+                            <span class="live-tag">● LIVE</span>
+                            <img src="https://picsum.photos/seed/kunming3/400/250" alt="昆明火车站站台监控">
+                        </div>
+                        <div class="monitor-info">
+                            <h3>站台及轨道监控 <span class="status-dot" title="运行中"></span></h3>
+                            <p>重点监控列车进出站动态及站台边缘安全，防止旅客跌落，确保行车安全。</p>
+                            <div class="monitor-meta">
+                                <span>分辨率: 4K</span>
+                                <span>状态: 正常</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 卡片 4 -->
+                    <article class="monitor-card">
+                        <div class="monitor-img">
+                            <span class="live-tag">● LIVE</span>
+                            <img src="https://picsum.photos/seed/kunming4/400/250" alt="昆明火车站出站口监控">
+                        </div>
+                        <div class="monitor-info">
+                            <h3>出站通道监控 <span class="status-dot" title="运行中"></span></h3>
+                            <p>监控出站人流及检票闸机运行状态，配合公安系统进行数据比对，打击票证不符行为。</p>
+                            <div class="monitor-meta">
+                                <span>分辨率: 4K</span>
+                                <span>状态: 正常</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 安全指南 -->
+        <section id="guide" class="section" style="background-color: #fff;">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">旅客安全出行指南</h2>
+                    <p class="section-desc">配合车站监控系统，共同维护良好的治安环境，保障您的旅途安全。</p>
+                </div>
+
+                <div class="guide-list">
+                    <div class="guide-item">
+                        <div class="guide-icon">🛡️</div>
+                        <div class="guide-content">
+                            <h3>主动配合安检与监控</h3>
+                            <p>昆明火车站监控中心对安检区域进行重点覆盖。请旅客主动配合工作人员进行人身及行李检查，不要遮挡监控摄像头，确保监控设备正常运行。</p>
+                        </div>
+                    </div>
+                    <div class="guide-item">
+                        <div class="guide-icon">🧳</div>
+                        <div class="guide-content">
+                            <h3>看管好随身财物</h3>
+                            <p>在候车、进站及出站过程中，请务必看管好个人行李及贵重物品。监控中心将对重点区域进行巡逻监控，发现遗失物品可及时联系工作人员。</p>
+                        </div>
+                    </div>
+                    <div class="guide-item">
+                        <div class="guide-icon">🚧</div>
+                        <div class="guide-content">
+                            <h3>遵守安全警示标识</h3>
+                            <p>站台边缘设有安全黄线，监控设备对越界行为进行实时捕捉。请旅客遵守站内秩序，听从广播及工作人员指引，有序上下车。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 常见问题 -->
+        <section id="faq" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">常见问题解答</h2>
+                    <p class="section-desc">关于昆明火车站监控系统的相关疑问解答。</p>
+                </div>
+
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">监控录像保存多久？</div>
+                        <div class="faq-answer">
+                            <p>昆明火车站监控中心对所有公共区域视频录像进行存储，一般保存期为30天，以便于后续的查询与案件追溯。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">可以申请调取监控录像吗？</div>
+                        <div class="faq-answer">
+                            <p>出于隐私保护和安保需要，普通旅客一般不直接提供监控视频查看服务。如遇遗失物品或特殊情况，可前往警务室申请协助查询。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">监控中心如何保障数据安全？</div>
+                        <div class="faq-answer">
+                            <p>监控中心采用专网传输与加密存储技术，严格限制访问权限，只有授权安保人员方可操作，确保监控数据不外泄。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">发现监控死角或设备故障怎么办？</div>
+                        <div class="faq-answer">
+                            <p>如果您发现监控设备损坏或存在监控盲区，请立即联系车站工作人员或拨打昆明站服务热线进行反馈。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>昆明站安防中心</h4>
+                    <p>致力于通过先进的监控技术与严格的管理制度，为旅客提供安全、便捷、舒适的出行环境。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">昆明铁路局官网</a></li>
+                        <li><a href="#">12306 官方网站</a></li>
+                        <li><a href="#">失物招领公告</a></li>
+                        <li><a href="#">列车时刻表查询</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>昆明站服务热线: 0871-12306</li>
+                        <li>警务室值班电话: 0871-XXXXXXX</li>
+                        <li>地址: 云南省昆明市官渡区北京南路</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 昆明火车站监控中心 版权所有 | 仅供信息展示与安全教育使用</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
